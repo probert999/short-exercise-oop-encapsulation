@@ -21,14 +21,14 @@ public class WeatherReporter {
     this.temperature = temperature;
   }
 
-  public static double celsiusToFahrenheit(double temperature) {
+  private double celsiusToFahrenheit() {
     return (9.0 / 5.0) * temperature + 32;
   }
 
   public String getReport() {
     return MessageFormat.format(
         "I am in {0} and it is {1}. {2}. The temperature in Fahrenheit is {3}.",
-        location, checkLocation(), checkTemperature(), celsiusToFahrenheit(temperature));
+        location, checkLocation(), checkTemperature(), celsiusToFahrenheit());
   }
 
   private String checkLocation() {

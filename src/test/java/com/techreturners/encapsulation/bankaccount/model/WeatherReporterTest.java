@@ -61,15 +61,4 @@ public class WeatherReporterTest {
         testWeather.getReport());
   }
 
-  @Test
-  public void testTemperatureConversion() {
-
-    assertEquals(
-        "Incorrect temperature conversion", 50, WeatherReporter.celsiusToFahrenheit(10), 0);
-
-    assertEquals("Incorrect temperature conversion", 32, WeatherReporter.celsiusToFahrenheit(0), 0);
-
-    assertEquals(
-        "Incorrect temperature conversion", 14, WeatherReporter.celsiusToFahrenheit(-10), 0);
-  }
 }
